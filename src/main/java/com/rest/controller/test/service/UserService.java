@@ -14,4 +14,15 @@ public class UserService implements IUserService {
     public boolean insertUser(User user) {
         return userDao.insertUser(user);
     }
+
+    @Override
+    public User getUserByEmail(String email) {
+        return userDao.getUserByEmail(email);
+    }
+
+    @Override
+    public User getUserById(long id) {
+        return userDao.getUserById(id);
+    }
+
 }

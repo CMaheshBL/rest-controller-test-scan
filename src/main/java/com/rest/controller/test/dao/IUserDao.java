@@ -37,4 +37,8 @@ public interface IUserDao {
                     "		,:info " +
                     "	)	";
     boolean insertUser(User user);
+
+    User getUserByEmail(String email);
+
+    User getUserById(long id);
 }

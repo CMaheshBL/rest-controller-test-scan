@@ -36,12 +36,20 @@ public class UserController {
         return user;
     }
 
-    @GetMapping("/legacy/runCommand/{cmd}")
-    public String runCommand(@PathVariable String cmd) throws IOException {
-        byte[] buf = new byte[1024];
-        int len = Runtime.getRuntime().exec(cmd).getInputStream().read(buf);
-        return new String(buf, 0, len);
+    @GetMapping(value = "/user/get/byEmail/{email}")
+    public User getUserByEmail(@PathVariable("email") String email) {
+        System.out.println("getUserByEmail");
+        System.out.println(email);
+        User user = userService.getUserByEmail(email);
+        return user;
     }
 
+    @GetMapping(value = "/user/get/byId/{id}")
+    public User getUserById(@PathVariable("id") Long id) {
+        System.out.println("getUserById");
+        System.out.println(id);
+        User user = userService.getUserById(id);
+        return user;
+    }
 
 }
