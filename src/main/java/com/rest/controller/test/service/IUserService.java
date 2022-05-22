@@ -8,4 +8,6 @@ public interface IUserService {
     User getUserByEmail(String email);
 
     User getUserById(long id);
+
+    void updateUser(User user);
 }

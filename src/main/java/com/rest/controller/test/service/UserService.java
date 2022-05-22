@@ -25,4 +25,9 @@ public class UserService implements IUserService {
         return userDao.getUserById(id);
     }
 
+    @Override
+    public void updateUser(User user) {
+        //TODO implement
+    }
+
 }

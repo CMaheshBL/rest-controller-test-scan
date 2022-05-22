@@ -52,4 +52,18 @@ public class UserController {
         return user;
     }
 
+    @PostMapping(value = "/user/update")
+    public void updateUser(@RequestBody User user) {
+        System.out.println("updateUserById");
+        System.out.println(user);
+        userService.updateUser(user);
+    }
+
+    @GetMapping(value = "/user/get/firstName/byEmail/{email}")
+    public String getUserFirstName(@PathVariable("email") String email) {
+        System.out.println("getUserFirstName");
+        return "LioR";
+    }
+
+
 }
