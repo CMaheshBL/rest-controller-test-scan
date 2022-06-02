@@ -9,7 +9,7 @@ curl --location --request POST 'http://localhost:8080/user/insert' \
 --data-raw '{
     "firstName": "lior",
     "password": "Aa123456!",
-    "email": "lior.solomon@checkmarx.com",
+    "email": "koko@domain.com",
     "info": "something funny"
     
 }'
